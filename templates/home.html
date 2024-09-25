@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to your CSS -->
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/new_entry">Add New Entry</a>
+        <a href="/login">Login</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Your Gratitude Journal</h1>
+        <ul>
+            {% for entry in entries %}
+                <li>{{ entry.content }} - Posted on {{ entry.date_posted }}</li>
+            {% endfor %}
+        </ul>
+        
+        <button onclick="location.href='/new_entry'">Add New Gratitude Entry</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gratitude Journal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
