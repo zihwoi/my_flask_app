@@ -11,7 +11,7 @@
     <form method="post">
         {{ form.hidden_tag() }}
         <div>
-            {{ form.content.label }}<br>
+            <label for="content">{{ form.content.label }}</label><br>
             {{ form.content(size=80) }}<br>
             {% for error in form.content.errors %}
                 <span style="color: red;">[{{ error }}]</span>

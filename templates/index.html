@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flask App</title>
+    <title>Gratitude Journal</title>
 </head>
 <body>
-    <h1>Welcome to My Flask Web App</h1>
-    <p>This is a basic Flask application!</p>
+    <h1>Gratitude Journal</h1>
+    <ul>
+        {% for entry in entries %}
+            <li>{{ entry.content }} - Posted on {{ entry.date_posted }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/new_entry">Add New Gratitude Entry</a>
 </body>
 </html>
