@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+   
+}
+h1 {
+    color: #2c3e50; /* Darker shade for headings */
+    text-align: center; /* Center the heading */
+}
+
+form {
+    max-width: 400px; /* Set a max width for the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* White background for form */
+}
+
+header {
+    background-color: #2c3e50; /* Darker header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.new-entry-button {
+    background-color: #3498db; /* Button color */
+    color: black; /* Bold and black color for the text */
+    padding: 10px 20px; /* Padding around the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger font for emphasis */
+    margin-top: 10px; /* Margin for spacing */
+    display: inline-block; /* Makes the link behave like a button */
+}
+
+main {
+    padding: 20px; /* Added padding for main content */
+}
+
+.entries {
+    margin: 20px 0; /* Spacing around entries */
+}
+
+.entry {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Light border around each entry */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    margin-bottom: 10px; /* Space between entries */
+}
+
+.entry-content {
+    font-size: 1.1em; /* Slightly larger font for content */
+}
+
+.entry-date {
+    font-size: 0.9em; /* Smaller font for the date */
+    color: #777; /* Lighter color for the date text */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db; /* Match header color */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

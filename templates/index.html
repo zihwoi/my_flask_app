@@ -2,16 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gratitude Journal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to your CSS -->
 </head>
 <body>
-    <h1>Gratitude Journal</h1>
-    <ul>
-        {% for entry in entries %}
-            <li>{{ entry.content }} - Posted on {{ entry.date_posted }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/new_entry">Add New Gratitude Entry</a>
+    <header>
+        <h1>Gratitude Journal</h1>
+        <nav>
+            <a href="/new_entry">Add New Gratitude Entry</a>
+            <a href="/about">About</a> <!-- Link to an about page if you have one -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="entries">
+            <h2>Your Gratitude Entries</h2>
+            <ul>
+                {% for entry in entries %}
+                    <li class="entry">
+                        <div class="entry-content">{{ entry.content }}</div>
+                        <div class="entry-date">Posted on {{ entry.date_posted }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+            {% if not entries %}
+                <p>No entries found. Start adding some gratitude!</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{ current_year }} Gratitude Journal. All rights reserved.</p>
+    </footer>
 </body>
 </html>
